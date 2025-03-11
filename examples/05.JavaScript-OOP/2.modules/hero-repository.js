@@ -12,8 +12,10 @@ class HeroRepository {
     }
 
     addHero(newHero) {
-        //Set id to last id+1
-        newHero.id = this.heroes[this.heroes.length - 1].id + 1;
+        if (!newHero.name || !newHero.title || !newHero.quote) {
+            throw new Error('Hero must have a name, title, and quote');
+        }
+        newHero.id = this.heroes.length ? this.heroes[this.heroes.length - 1].id + 1 : 1;
         this.heroes.push(newHero);
     }
 

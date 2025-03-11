@@ -40,12 +40,11 @@
             const verses = await getVerses(surahId);
             console.log(verses);
 
+            // console.log(`<li>${v.text_uthmani} (${i + 1})</li>`);
+
             const versesHtml = `
-                ${verses.map((v, i) => {
-                console.log(`<li>${v.text_uthmani} (${i + 1})</li>`);
-                return `<li>${v.text_uthmani} (${i + 1})</li>`
-            }).join(' ')}
-            `;
+                ${verses.map((v, i) => `<li>${v.text_uthmani} (${i + 1})</li>`
+            ).join(' ')}`;
             document.querySelector('#versesList').innerHTML = versesHtml;
         }
 

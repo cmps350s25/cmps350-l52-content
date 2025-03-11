@@ -1,11 +1,16 @@
 # These files and folders will be ignored and not pushed to github
+# Next.js
+node_modules/
+.next/
+.swc/
+.*.env
+
 # NetBeans
 build/
 dist/
 .idea/
 **/.cache/*
 ._*/
-node_modules/
 private/
 old/
 oldExamples/
