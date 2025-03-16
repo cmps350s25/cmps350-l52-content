@@ -1,30 +1,42 @@
-import {getHeroes, addHero} from './hero-repo'
+import { getHeroes, addHero } from "./hero-repo";
 
 export async function GET(request) {
   try {
-    const heroes = await getHeroes()
-    return Response.json(heroes)
+    const heroes = await getHeroes();
+    return new Response(JSON.stringify(heroes), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (err) {
-      console.log(err)
-      return Response.json({ error: err.message}, {status: 500 })
+    console.log(err);
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
 
 export async function POST(request) {
   try {
-      let hero = await request.json()
-      hero = await addHero(hero)
-      const urlOfNewHero = `/api/heroes/${hero.id}`
-      return Response.json(hero, 
-            { status: 201 ,
-              headers: { 'location': urlOfNewHero }
-            })
-  }
-  catch (err) {
-      console.log(err)
-      return Response.json({ error: err.message}, { status: 500 })
+    let newHero = await request.json();
+    newHero = await addHero(newHero);
+    const urlOfNewHero = `/api/heroes/${newHero.id}`;
+    return new Response(JSON.stringify(newHero), {
+      status: 201,
+      headers: {
+        location: urlOfNewHero,
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
+
 
 /*
 export async function GET(request) {
