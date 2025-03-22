@@ -43,7 +43,7 @@ export async function GET(request, { params }) {
 
   return new Response(
     JSON.stringify({
-      content: `Blogs for ${params.year}!`,
+      content: `Blogs for ${(await params).year}!`,
       token,
       apikey: apikey,
       userAgent,
