@@ -1,0 +1,28 @@
+/* app/settings/components/SettingsForm.module.css */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 448px;
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkboxGroup input {
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  .checkboxGroup label {
+      display: inline-block;
+      margin-bottom: 0;
+  }
+  
+  .select { }

@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
 
 // app/blogs/[id]/route.js
@@ -24,15 +25,10 @@ export async function GET(request, { params }) {
   const cookieStore = await cookies();
   const token = cookieStore.get("token");
 
+  // Check if the token exists
   if (!token) {
-    cookieStore.set({
-      name: "token",
-      value: '{id: 123, name: "John Doe"}',
-      // The cookie will expire in 1 day
-      maxAge: 60 * 60 * 24, // 1 day
-      httpOnly: true, // The cookie is not accessible via JavaScript
-      path: "/", // The cookie is accessible on all paths
-    });
+    redirect("/login.html");
+    return;
   }
 
   const headersList = await headers();

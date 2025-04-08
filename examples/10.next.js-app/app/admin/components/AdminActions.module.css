@@ -1,0 +1,13 @@
+/* app/admin/components/AdminActions.module.css */
+.actionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.actionForm { }
+
+.statusMessage {
+    color: var(--primary-color);
+    margin-top: 0;
+}

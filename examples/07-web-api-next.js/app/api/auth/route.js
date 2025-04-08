@@ -1,3 +1,5 @@
+import { cookies, headers } from "next/headers";
+
 export function GET(request) {
   return new Response("Hello, Next.js!");
 }
@@ -9,7 +11,17 @@ export async function POST(request) {
   const password = formData.get("password");
   const user = verifyUser(email, password);
   if (user) {
-    return new Response(JSON.stringify(user), {
+    const cookieStore = await cookies();
+    cookieStore.set({
+      name: "token",
+      value: JSON.stringify(user),
+      // The cookie will expire in 1 day
+      maxAge: 60 * 60 * 24, // 1 day
+      httpOnly: true, // The cookie is not accessible via JavaScript
+      path: "/", // The cookie is accessible on all paths
+    });
+
+    return new Response(JSON.stringify({ message: `Welcome ${user.name}` }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
