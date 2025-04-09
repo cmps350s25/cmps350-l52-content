@@ -1,0 +1,184 @@
+[
+  {
+    "crn" : 261,
+    "code": "CMPE 261",
+    "name": "Digital Logic Design",
+    "ch" : 3,
+    "program" : "CE",
+    "semester" : "Spring 2025",
+    "instructorId" : 10,
+    "assessments" : [
+      {
+        "id": 1,
+        "type": "Homework",
+        "title": "Homework 1",
+        "dueDate": "02/03/2025",
+        "effortHours": 2,
+        "weight": 5
+      },
+      {
+        "id": 2,
+        "type": "Homework",
+        "title": "Homework 2",
+        "dueDate": "09/03/2025",
+        "effortHours": 2,
+        "weight": 5
+      },
+      {
+        "id": 3,
+        "type": "Quiz",
+        "title": "Quiz 1",
+        "dueDate": "16/03/2025",
+        "effortHours": 0.5,
+        "weight": 4
+      },
+      {
+        "id": 4,
+        "type": "Quiz",
+        "title": "Quiz 2",
+        "dueDate": "23/03/2025",
+        "effortHours": 0.5,
+        "weight": 4
+      },
+      {
+        "id": 5,
+        "type": "Quiz",
+        "title": "Quiz 3",
+        "dueDate": "30/03/2025",
+        "effortHours": 0.5,
+        "weight": 4
+      },
+      {
+        "id": 6,
+        "type": "Quiz",
+        "title": "Quiz 4",
+        "dueDate": "06/02/2025",
+        "effortHours": 0.5,
+        "weight": 4
+      },
+      {
+        "id": 7,
+        "type": "Midterm exam",
+        "title": "Midterm exam 1",
+        "dueDate": "13/02/2025",
+        "effortHours": 4,
+        "weight": 15
+      },
+      {
+        "id": 8,
+        "type": "Midterm exam",
+        "title": "Midterm exam 2",
+        "dueDate": "05/04/2025",
+        "effortHours": 4,
+        "weight": 15
+      },
+      {
+        "id": 9,
+        "type": "Project",
+        "title": "Project phase 1",
+        "dueDate": "12/04/2025",
+        "effortHours": 6,
+        "weight": 6
+      },
+      {
+        "id": 10,
+        "type": "Project",
+        "title": "Project phase 2",
+        "dueDate": "27/04/2025",
+        "effortHours": 8,
+        "weight": 8
+      },
+      {
+        "id": 11,
+        "type": "Project",
+        "title": "Project phase 3",
+        "dueDate": "11/05/2025",
+        "effortHours": 8,
+        "weight": 10
+      },
+      {
+        "id": 12,
+        "type": "Final exam",
+        "title": "Final exam",
+        "dueDate": "16/06/2025",
+        "effortHours": 6,
+        "weight": 20
+      }
+    ],
+    "comments" : [
+      {
+        "id": 1,
+        "title": "Too many quizzes",
+        "body": "Please reduce quizzes to two. We will busy with our senior project.",
+        "createdBy": "af22001",
+        "createdDate": "10/03/2025"
+      },
+      {
+        "id": 2,
+        "title": "Too many project phases",
+        "body": "Could you please make the project delivery in one phase towards the end of the semester.",
+        "createdBy": "ff22003",
+        "createdDate": "13/03/2025"
+      },
+      {
+        "id": 3,
+        "title": "Course workload is already reasonable",
+        "body": "401 bad requests. Lazy creatures. Alaysa Minkum Talibun Rashid.",
+        "createdBy": "cefaculty",
+        "createdDate": "16/03/2025"
+      },
+      {
+        "id": 4,
+        "title": "Remove homework",
+        "body": "Since the course has 3 phases project. Consider removing the homework and moving it to the Lab. Rifqan Bi Talaba.",
+        "createdBy": "cecoordinator",
+        "createdDate": "19/03/2025"
+      }
+    ]
+  },
+  {
+    "crn" : 263,
+    "code": "CMPE 263",
+    "name": "Computer Architecture and Organization I",
+    "ch" : 3,
+    "program" : "CE",
+    "semester" : "Spring 2025",
+    "instructorId" : 10
+  },
+  {
+    "crn" : 363,
+    "code": "CMPE 363",
+    "name": "Networking I",
+    "ch" : 3,
+    "program" : "CE",
+    "semester" : "Spring 2025",
+    "instructorId" : 10
+  },
+  {
+    "crn" : 151,
+    "code": "CMPS 151",
+    "name": "Programming Concepts",
+    "ch" : 3,
+    "program" : "CS",
+    "semester" : "Spring 2025",
+    "instructorId" : 11
+  },
+  {
+    "crn" : 205,
+    "code": "CMPS 205",
+    "name": "Discrete Structures for Computing",
+    "ch" : 3,
+    "program" : "CS",
+    "semester" : "Spring 2025",
+    "instructorId" : 11
+  },
+  {
+    "crn" : 251,
+    "code": "CMPS 251",
+    "name": "Object-Oriented Programming",
+    "ch" : 3,
+    "program" : "CS",
+    "semester" : "Spring 2025",
+    "instructorId" : 11
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "staffNo": 10,
+    "username": "csfaculty",
+    "firstname": "CS",
+    "lastname": "Faculty",
+    "password": "password",
+    "role": "Faculty"
+  },
+  {
+    "staffNo": 11,
+    "username": "cefaculty",
+    "firstname": "CE",
+    "lastname": "Faculty",
+    "password": "password",
+    "role": "Faculty"
+  },
+  {
+    "staffNo": 100,
+    "username": "cscoordinator",
+    "firstname": "CS",
+    "lastname": "Coordinator",
+    "password": "password",
+    "role": "Coordinator",
+    "program": "CS"
+  },
+  {
+    "staffNo": 101,
+    "username": "cecoordinator",
+    "firstname": "CE",
+    "lastname": "Coordinator",
+    "password": "password",
+    "role": "Coordinator",
+    "program": "CE"
+  }
+]

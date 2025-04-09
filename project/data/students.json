@@ -1,0 +1,58 @@
+[
+  {
+    "studentId": 2022001,
+    "username": "af22001",
+    "firstname": "Ali",
+    "lastname": "Faleh",
+    "password": "password",
+    "gender": "M",
+    "program": "CS",
+    "courseIds": [
+      151,
+      261,
+      263
+    ]
+  },
+  {
+    "studentId": 2022002,
+    "username": "ai22002",
+    "firstname": "Abbas",
+    "lastname": "Ibn Firnas",
+    "password": "password",
+    "gender": "M",
+    "program": "CS",
+    "courseIds": [
+      151,
+      251,
+      263
+    ]
+  },
+  {
+    "studentId": 2022003,
+    "username": "ff22003",
+    "firstname": "Fatima",
+    "lastname": "Fihriya",
+    "password": "password",
+    "gender": "F",
+    "program": "CE",
+    "courseIds": [
+      205,
+      261,
+      363
+    ]
+  },
+  {
+    "studentId": 2022004,
+    "username": "mb22004",
+    "firstname": "Mariam",
+    "lastname": "Bint Firnas",
+    "password": "password",
+    "gender": "F",
+    "program": "CE",
+    "courseIds": [
+      151,
+      251,
+      363
+    ]
+  }
+]
