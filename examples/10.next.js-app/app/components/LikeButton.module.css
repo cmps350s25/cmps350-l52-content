@@ -1,0 +1,10 @@
+.likeButton {
+    margin-left: 8px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    background-color: #48bb78;
+    color: white;
+}
+.likeButton:hover:not(:disabled) {
+    background-color: #38a169;
+}
