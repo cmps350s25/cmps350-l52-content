@@ -1,0 +1,36 @@
+'use server';
+
+import { readFile, writeFile } from 'fs/promises';
+import path from 'path';
+
+const filePath = path.join(process.cwd(), 'data', 'todos.json');
+
+export async function createTodo(text) {
+  const todo = { id: Date.now(), text };
+
+  try {
+    // Read current todos
+    const data = await readFile(filePath, 'utf8');
+    const todos = JSON.parse(data);
+
+    // Add new todo
+    todos.push(todo);
+
+    // Write updated list
+    await writeFile(filePath, JSON.stringify(todos, null, 2), 'utf8');
+
+    return todo;
+  } catch (error) {
+    console.error('Error saving todo:', error);
+    throw new Error('Could not save todo');
+  }
+}
+
+export async function fetchTodos() {
+  try {
+    const data = await readFile(filePath, 'utf8');
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+}

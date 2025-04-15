@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello React!</title>
+    <script src="https://unpkg.com/react@19.0.0/cjs/react.production.js"></script>
+    <script src="https://unpkg.com/react-dom@19.0.0/cjs/react-dom.production.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // JSX = similar to HTML
+        const Hello = ({ name, age }) => <hl>Hello {name}. I am {age} years old.</hl>;
+
+        const rootElement = document.querySelector("#root");
+        ReactDOM.render(<Hello name="React Dev" age="19" />, rootElement);
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
