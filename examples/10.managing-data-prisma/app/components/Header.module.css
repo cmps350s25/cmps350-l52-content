@@ -1,0 +1,26 @@
+.header {
+  border: 1px solid #0f0f0f;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 30px;
+}
+
+.nav {
+    background-color: #f7fafc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .navList {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem:hover {
+    color: #0f0f0f;
+    text-decoration: underline;
+  }

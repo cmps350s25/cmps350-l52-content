@@ -1,0 +1,147 @@
+/* app/globals.css */
+:root {
+  --primary-color: #0070f3;
+  --secondary-color: #1a1a1a;
+  --text-color: #333;
+  --background-color: #fff;
+  --border-color: #eaeaea;
+  --error-color: #e53e3e;
+  --success-color: #48bb78;
+  --disabled-opacity: 0.6;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+body {
+  padding-bottom: 4rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 0.25rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.3);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: var(--disabled-opacity);
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+.success-message {
+    color: var(--success-color);
+    margin-top: 0.5rem;
+}
+.status-message {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+button.blue-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+}
+
+button.blue-button:hover {
+  background-color: #005bb5;
+}
+
+a.button-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+}
+
+a.button-link:hover {
+  background-color: #005bb5;
+}
