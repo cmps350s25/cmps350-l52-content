@@ -1,4 +1,4 @@
-import { fetchTodos } from "@/actions/todos";
+import { fetchTodos } from './actions';
 import TodoForm from "./TodoForm";
 
 export default async function TodoPage() {

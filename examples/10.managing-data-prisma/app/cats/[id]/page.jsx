@@ -31,7 +31,7 @@ export default async function CatForm({ params }) {
       <br />
       {cat ? <img src={cat?.imageUrl} width={150} /> : ""}
       <form method="post" encType="multipart/form-data" action="/api/cats">
-        <input name="id" type="hidden" defaultValue={cat?.id} />
+        <input name="id" type="hidden" defaultValue={cat?.id ?? 0} />
         <label>Name</label>
         <input name="name" type="text" defaultValue={cat?.name} />
         <label>Breed </label>

@@ -5,7 +5,8 @@
   deleteUserByEmail,
 } from "./users-repo.js" */
 //import { updatePost } from "./posts-repo.js"
-import { PrismaClient } from "@prisma/client";
+//import { PrismaClient } from "@prisma/client";
+import prisma from "../../lib/prisma.js";
 
 async function main() {
   try {
@@ -32,9 +33,9 @@ async function main() {
   //await prisma.$disconnect()
   //}
 
-  const prisma = new PrismaClient({
+  /*   const prisma = new PrismaClient({
     log: ["query"],
-  });
+  }); */
   const users = await prisma.$queryRaw`SELECT * FROM User`;
   console.log(users);
 

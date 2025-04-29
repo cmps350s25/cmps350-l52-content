@@ -22,8 +22,9 @@ export default async function CatsPage() {
           <li key={cat.id}>
             <img src={cat.imageUrl} width={150} />
             <br />
-            <a href={`/cats/${cat.id}`}>{cat.name}</a> ({cat.breed})
+            <Link href={`/cats/${cat.id}`}>{cat.name}</Link>({cat.breed})
             <DeleteButton id={cat.id} onClicked={onDeleteCat} />
+            <br />
             <LikeButton catId={cat.id} likesCount={cat.likes} />
             <br />
             <br />

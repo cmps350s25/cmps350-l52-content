@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useOptimistic } from 'react';
-import { createTodo } from '@/actions/todos';
+import { useState, useOptimistic } from "react";
+import { createTodo } from "./actions";
 
 export default function TodoForm({ initialTodos }) {
   const [todos, setTodos] = useState(initialTodos);
@@ -12,12 +12,12 @@ export default function TodoForm({ initialTodos }) {
   );
 
   async function action(formData) {
-    const text = formData.get('todo');
-    const optimisticTodo = { id: 'temp-' + Date.now(), text };
+    const text = formData.get("todo");
+    const optimisticTodo = { id: "temp-" + Date.now() % 100, text };
 
     addOptimisticTodo(optimisticTodo); // Update UI immediately
     const savedToDo = await createTodo(text); // Call shared server action
-    setTodos(prev => [...prev, savedToDo]);  // Confirm with real data
+    setTodos((prev) => [...prev, savedToDo]); // Confirm with real data
   }
 
   return (
@@ -25,8 +25,10 @@ export default function TodoForm({ initialTodos }) {
       <input type="text" name="todo" placeholder="New task..." required />
       <button type="submit">Add</button>
       <ul>
-        {optimisticTodos.map(todo => (
-          <li key={todo.id}>{todo.text}</li>
+        {optimisticTodos.map((todo) => (
+          <li key={todo.id}>
+            {todo.text} - {todo.id}
+          </li>
         ))}
       </ul>
     </form>
