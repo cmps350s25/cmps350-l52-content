@@ -1,7 +1,7 @@
 "use server";
 
 import sectionRepo from "../_repo/SectionRepo";
-import { getUserFromAuthCookie } from "./auth";
+import { getCurrentUser } from "./auth";
 import {
   getDefaultSemesterId,
   getSemesters as fetchSemesters,
@@ -10,7 +10,7 @@ import {
 export async function getSections(semesterId, user) {
   try {
     if (!user) {
-      user = await getUserFromAuthCookie();
+      user = await getCurrentUser();
     }
 
     if (!semesterId) {

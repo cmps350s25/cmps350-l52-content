@@ -1,11 +1,11 @@
 import { getComments } from "@/app/actions/comments";
-import { getUserFromAuthCookie } from "@/app/actions/auth";
+import { getCurrentUser } from "@/app/actions/auth";
 import CommentsList from "./components/CommentsList";
 import CommentForm from "./components/CommentForm";
 import styles from "./comments.module.css";
 
 export default async function CommentsPage({ searchParams }) {
-  const user = await getUserFromAuthCookie();
+  const user = await getCurrentUser();
 
   // Get the sectionCRN directly from URL params
   const params = await searchParams;

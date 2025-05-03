@@ -1,7 +1,7 @@
 import { getAssessments } from "@/app/actions/assessments";
 import { getSemesters } from "@/app/actions/semesters";
 import { getSections } from "@/app/actions/sections";
-import { getUserFromAuthCookie } from "@/app/actions/auth";
+import { getCurrentUser } from "@/app/actions/auth";
 import AssessmentCard from "./AssessmentCard";
 import AssessmentFilterPanel from "./AssessmentFilterPanel";
 import AddButton from "./AddButton";
@@ -15,7 +15,7 @@ export default async function AssessmentsList({ searchParams }) {
   /*   console.log("AssessmentsList - Semester ID:", semesterId);
   console.log("AssessmentsList - Section CRN:", sectionCRN); */
 
-  const user = await getUserFromAuthCookie();
+  const user = await getCurrentUser();
   const semesters = await getSemesters();
 
   // Determine default semester

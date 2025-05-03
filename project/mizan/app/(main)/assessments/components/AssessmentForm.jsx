@@ -5,7 +5,7 @@ import {
 } from "@/app/actions/assessments";
 import { getSemesters } from "@/app/actions/semesters";
 import { getSections } from "@/app/actions/sections";
-import { getUserFromAuthCookie } from "@/app/actions/auth";
+import { getCurrentUser } from "@/app/actions/auth";
 import styles from "./AssessmentForm.module.css";
 import AssessmentTypeSelector from "./AssessmentTypeSelector";
 import SemesterSelector from "./SemesterSelector";
@@ -18,7 +18,7 @@ export default async function AssessmentForm({ assessmentId, semesterId }) {
     .split("T")[0];
 
   // Get current user to fetch their sections
-  const user = await getUserFromAuthCookie();
+  const user = await getCurrentUser();
 
   let assessment;
   if (assessmentId && assessmentId !== "new") {

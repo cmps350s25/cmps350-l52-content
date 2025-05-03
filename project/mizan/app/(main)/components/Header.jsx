@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getUserFromAuthCookie } from "@/app/actions/auth";
+import { getCurrentUser } from "@/app/actions/auth";
 import LogoutButton from "./LogoutButton";
 import styles from "./Header.module.css";
 
@@ -16,7 +16,7 @@ const links = [
 
 export default async function Header() {
   // Get current user (if logged in)
-  const user = await getUserFromAuthCookie();
+  const user = await getCurrentUser();
 
   return (
     <header className={styles.header}>

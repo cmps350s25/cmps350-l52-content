@@ -1,7 +1,7 @@
 "use server";
 
 import assessmentRepo from "@/app/_repo/AssessmentRepo";
-import { getUserFromAuthCookie } from "./auth";
+import { getCurrentUser } from "./auth";
 import { getDefaultSemesterId } from "@/app/_repo/SemesterRepo";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -31,7 +31,7 @@ export async function getAssessmentsBySection(sectionCRN) {
 
 export async function getAssessments(semesterId, sectionCRN) {
   try {
-    const user = await getUserFromAuthCookie();
+    const user = await getCurrentUser();
     if (!user) {
       throw new Error("User not authenticated.");
     }
@@ -60,7 +60,7 @@ export async function getAssessmentById(assessmentId) {
 
 export async function getAssessmentSummary(semesterId, sectionCRN) {
   try {
-    const user = await getUserFromAuthCookie();
+    const user = await getCurrentUser();
     if (!user) {
       throw new Error("User not authenticated.");
     }

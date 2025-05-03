@@ -1,7 +1,7 @@
 "use server";
 
 import commentRepo from "@/app/_repo/CommentRepo";
-import { getUserFromAuthCookie } from "./auth";
+import { getCurrentUser } from "./auth";
 import { revalidatePath } from "next/cache";
 
 export async function getComments(sectionCRN) {
@@ -16,7 +16,7 @@ export async function getComments(sectionCRN) {
 
 export async function addComment(formData) {
   try {
-    const user = await getUserFromAuthCookie();
+    const user = await getCurrentUser();
     if (!user) {
       throw new Error("User not authenticated.");
     }

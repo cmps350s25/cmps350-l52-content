@@ -36,7 +36,8 @@ export async function login(prevState, formData) {
   //return user;
 }
 
-export async function getUserFromAuthCookie() {
+// Get the current user from the JWT token stored in cookies
+export async function getCurrentUser() {
   const cookieStore = await cookies();
   const token = cookieStore.get("auth_token")?.value;
 
