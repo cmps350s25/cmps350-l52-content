@@ -1,0 +1,7 @@
+[
+  { "id": "homework", "label": "Homework" },
+  { "id": "project", "label": "Project" },
+  { "id": "midterm", "label": "Midterm" },
+  { "id": "final", "label": "Final Exam" },
+  { "id": "quiz", "label": "Quiz" }
+]

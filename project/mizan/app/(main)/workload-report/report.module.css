@@ -1,0 +1,60 @@
+.title {
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+}
+
+.report-container {
+  margin: 2rem;
+}
+
+.report-container table {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  width: 98%;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+  height: 33vh;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.report-container table:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.report-container thead {
+  background-color: #f5f7fa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.report-container th {
+  background-color: #f0f2f5;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 2px solid #e0e4e9;
+  white-space: nowrap;
+}
+
+.report-container td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.report-container tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.report-container tr:hover {
+  background-color: #f5f5f5;
+}

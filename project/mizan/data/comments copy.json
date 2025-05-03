@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "sectionCRN": "355-S25",
+    "authorId": 1,
+    "title": "Inquiry About Assignment 1 Grading Timeline",
+    "content": "Good evening, Professor. I hope this message finds you well. I wanted to kindly inquire about when we can expect the grades for Assignment 1 to be posted. Thank you in advance for your response.",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": null
+  },
+  {
+    "id": 2,
+    "sectionCRN": "303-S25",
+    "authorId": 1,
+    "title": "Request for Feedback on Project Phase 1",
+    "content": "Dear Professor, I hope you're doing well. Could you please provide us with feedback on Phase 1 of the project? It would be really helpful as we move forward. Thank you!",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": null
+  },
+  {
+    "id": 5,
+    "sectionCRN": "350-S25",
+    "authorId": 4,
+    "title": "Reflections on the Project Timeline",
+    "content": "The project was an enjoyable and enriching experience for our team. However, we feel that having a bit more time to work on it would have allowed us to refine our work further. Thank you for considering this feedback.",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": null
+  },
+  {
+    "id": 7,
+    "sectionCRN": "350-S25",
+    "authorId": 2,
+    "title": "Acknowledgment of Project Feedback",
+    "content": "Thank you for your input regarding the project timeline. We will take this into account for future iterations to ensure a smoother experience.",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": 5
+  },
+  {
+    "id": 8,
+    "sectionCRN": "303-S25",
+    "authorId": 2,
+    "title": "Update on Project Feedback and Grades",
+    "content": "Thank you for your patience. You will receive your grades and detailed feedback for Phase 1 during the lab session next week, inshallah. Please let me know if you have any further questions.",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": 2
+  },
+  {
+    "id": 10,
+    "sectionCRN": "355-S25",
+    "authorId": 5,
+    "title": "Assignment 1 Grades Update",
+    "content": "Thank you for your inquiry. The grades for Assignment 1 will be posted this week, inshallah. Please stay tuned for further updates.",
+    "createdDate": "2025-04-12",
+    "replyToCommentId": 1
+  },
+  {
+    "id": 15,
+    "sectionCRN": "355-S25",
+    "authorId": 1,
+    "title": "Concern About Overlapping Deadlines",
+    "content": "Good day, Professor. I wanted to express my concern about the two homework assessments being due only one week apart. It feels a bit overwhelming, and I was wondering if it might be possible to get an extension for Homework 2. Thank you for considering this.",
+    "createdDate": "2025-04-13",
+    "replyToCommentId": null
+  },
+  {
+    "id": 16,
+    "sectionCRN": "355-S25",
+    "authorId": 5,
+    "title": "Response to Deadline Concern",
+    "content": "Thank you for sharing your concern, Alya. I completely understand how challenging overlapping deadlines can be. I will reach out to the course coordinator to discuss the possibility of an extension for Homework 2 and will get back to you soon.",
+    "createdDate": "2025-04-13",
+    "replyToCommentId": 15
+  }
+]

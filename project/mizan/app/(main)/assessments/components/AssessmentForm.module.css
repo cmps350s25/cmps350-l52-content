@@ -1,0 +1,116 @@
+.container {
+  max-width: 700px;
+  width: 95%; 
+  margin: 1rem auto; 
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--darkbluegreen);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--darkgrey);
+  flex: 0 0 20%; /* Decreased from 30% to allow more space for inputs */
+  text-align: right;
+}
+
+.input, 
+.select {
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  flex: 0 0 75%; 
+  width: 75%;
+}
+
+.input:focus, 
+.select:focus {
+  outline: none;
+  border-color: var(--bluegreen);
+  box-shadow: 0 0 0 2px rgba(45, 110, 109, 0.2);
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background-color: var(--bluegreen);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: center;
+  width: auto;
+  min-width: 200px;
+}
+
+.button:hover {
+  background-color: var(--darkbluegreen);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    width: 98%; 
+    padding: 1.5rem;
+    margin: 1rem auto; 
+  }
+  
+  .field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .label {
+    flex: 0 0 100%;
+    text-align: left;
+  }
+  
+  .input,
+  .select {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+
+/* Add a utility class for centering if needed elsewhere */
+.centerInPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 0;
+}

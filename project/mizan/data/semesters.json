@@ -1,0 +1,5 @@
+[
+  { "id": "Fall-2024", "label": "Fall 2024", "isDefault": false },
+  { "id": "Spring-2025", "label": "Spring 2025", "isDefault": true },
+  { "id": "Fall-2025", "label": "Fall 2025", "isDefault": false }
+]

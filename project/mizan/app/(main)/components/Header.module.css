@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navigationItem {
+  position: relative;
+}
+
+.navigationItem a {
+  color: var(--darkgrey);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.navigationItem a:hover {
+  color: var(--bluegreen);
+}
+
+.navigationItem a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bluegreen);
+  transition: width 0.3s ease;
+}
+
+.navigationItem a:hover::after {
+  width: 100%;
+}
+
+.brandLogo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--darkbluegreen);
+}
+
+/* New styles for auth section */
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  color: var(--darkbluegreen);
+  font-weight: 500;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: var(--accentbrickred);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.2s ease;
+  width: auto;
+}
+
+.logoutButton:hover {
+  text-decoration: underline;
+}
+
+.loginLink {
+  color: var(--bluegreen);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.3rem 0.5rem;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .navContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  
+  .navigation {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .authSection {
+    width: 100%;
+    justify-content: center;
+  }
+}

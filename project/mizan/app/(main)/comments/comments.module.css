@@ -1,0 +1,235 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--lightgrey);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: var(--darkbluegreen);
+  margin-bottom: 0.5rem;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.commentContainer {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--lightmutedbluegreen);
+  color: var(--darkbluegreen);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bluegreen);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.commentAuthor {
+  font-weight: 600;
+}
+
+.commentTime {
+  font-size: 0.8rem;
+  color: var(--darkgrey);
+  margin-left: auto;
+}
+
+.commentTitle {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--darkbluegreen);
+  /* border-bottom: 1px solid var(--lightgrey); */
+}
+
+.commentContent {
+  padding: 0.5rem;
+  color: var(--darkgrey);
+  white-space: pre-wrap;
+}
+
+.replyList {
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--lightgrey);
+}
+
+.replyHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.replyContent {
+  padding: 0 0 0.5rem 0;
+  color: var(--darkgrey);
+  white-space: pre-wrap;
+}
+
+.commentForm {
+  margin-top: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.formTitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--darkbluegreen);
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input, 
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--lightgrey);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input:focus, 
+.textarea:focus {
+  outline: none;
+  border-color: var(--bluegreen);
+  box-shadow: 0 0 0 2px rgba(45, 110, 109, 0.1);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bluegreen);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--darkbluegreen);
+}
+
+.replyButton {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--bluegreen);
+  border: 1px solid var(--bluegreen);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.replyButton:hover {
+  background-color: var(--bluegreen);
+  color: white;
+}
+
+.replyForm {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background-color: var(--cream);
+  border-radius: 0.3rem;
+}
+
+.noComments {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--grey);
+  font-style: italic;
+}
+
+.viewReplies {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--bluegreen);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.viewReplies:hover {
+  text-decoration: underline;
+}
+
+.deleteButton {
+  background: transparent;
+  color: var(--grey);
+  border: none;
+  padding: 0.5rem;
+  margin-left: auto;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.deleteButton:hover {
+  color: var(--accentbrickred);
+  background-color: rgba(214, 49, 49, 0.1);
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

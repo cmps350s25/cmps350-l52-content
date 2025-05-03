@@ -1,0 +1,516 @@
+/* CSS Variables */
+:root {
+  --white: #fdfcff;
+  --cream: #fcf4f6fa;
+  --mutedcream: #e8d6e0;
+  --creampink: #f3d7e8;
+  --brightcyan: #6bc4ca;
+  --darkbluegreen: #13353b;
+  --mutedbluegreen: #045a58;
+  --lightmutedbluegreen: #89b8bb;
+  --bluegreen: #2d6e6d;
+  --mutedpurple: #94738a;
+  --lightpurple: #83749f;
+  --purple: #6e4b8a;
+  --purple2: #513b79;
+  --darkpurple: #513b79;
+  --verydarkpurple: #28133a;
+  --mutedarkpurple: #4f3663;
+  --accentpink: #b5548d;
+  --accentbrickred: rgb(214, 49, 49);
+  --accentgreen: rgb(45, 114, 23);
+  --lightgrey: #b3b3b3;
+  --black: #1d1d1f;
+  --darkgrey: #2a2e31;
+  --grey: #424e4ecc;
+
+  /* Animation durations */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 2.5rem;
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-round: 50%;
+}
+
+/* Base styles */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout components */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.8fr;
+  grid-template-rows: 3fr 5fr;
+  grid-template-areas:
+    "course   course  report report  calendar"
+    "assessments assessments assessments assessments calendar";
+  gap: var(--space-sm);
+  height: 85vh;
+  padding: 0.2rem;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  margin: var(--space-sm);
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 1.05rem;
+}
+
+.header-user-icon {
+  font-size: 1.2rem;
+  margin-right: var(--space-sm);
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(145deg, var(--brightcyan), var(--purple2));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-round);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+  grid-area: nav;
+  display: flex;
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  width: 70px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  padding-bottom: 4rem;
+  margin-right: 1.5rem;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  transition: 
+    width var(--transition-normal) cubic-bezier(0.7, 0, 0.2, 1),
+    padding var(--transition-normal) ease;
+}
+
+.nav:hover {
+  width: 170px;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  padding: 0.7rem 0;
+}
+
+.nav-icon {
+  font-size: 1.95rem;
+  color: rgb(240, 232, 235);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+}
+
+.nav-label {
+  display: none;
+  transform: translateX(10px);
+  transition: 
+    opacity var(--transition-normal) ease,
+    transform 0.4s ease-in-out;
+  color: var(--white);
+}
+
+.nav:hover .nav-label {
+  display: contents;
+}
+
+main {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+/* Main content area */
+.main {
+  grid-area: main;
+  min-height: 84vh;
+}
+
+.home {
+  grid-area: main;
+  border-radius: var(--radius-md);
+  margin: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  margin-right: 3rem;
+}
+
+.content-section {
+  background-color: var(--cream);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  margin: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  margin-right: 3rem;
+  max-width: 100%;
+  min-height: 80%;
+  line-height: 1.8;
+  padding: var(--space-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: 
+    background-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--bluegreen, #2D6E6D);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  background-color: var(--darkbluegreen, #1d4b4a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--bluegreen, #2D6E6D);
+  border: 1px solid var(--bluegreen, #2D6E6D);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(45, 110, 109, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
+  display: block;
+}
+
+.btn:disabled {
+  background-color: var(--lightgrey);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(45, 110, 109, 0.2);
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--darkgrey);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  background-color: var(--white);
+  color: var(--darkbluegreen);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast) ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--bluegreen);
+  box-shadow: 0 0 0 2px rgba(45, 110, 109, 0.1);
+}
+
+.form-footer {
+  margin-top: var(--space-md);
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--grey, #666);
+}
+
+/* Common text elements */
+.text-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.text-title {
+  color: var(--darkbluegreen);
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.text-subtitle {
+  color: var(--grey);
+  font-size: 1rem;
+  margin-top: var(--space-xs);
+}
+
+/* Links */
+.link {
+  color: var(--bluegreen, #2D6E6D);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--darkbluegreen, #1d4b4a);
+  text-decoration: underline;
+}
+
+/* Utilities */
+.loader {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  border: 8px solid var(--mutedpurple);
+  border-top: 8px solid var(--mutedarkpurple);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Message components */
+.message {
+  margin-top: var(--space-sm);
+  padding: 0.9rem;
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.message-error {
+  background-color: rgba(214, 49, 49, 0.9);
+}
+
+.message-success {
+  background-color: rgba(45, 114, 23, 0.9);
+}
+
+/* Widgets */
+.widget {
+  border-radius: var(--radius-md);
+  background: white;
+  padding: var(--space-md);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.widget-list {
+  list-style: none;
+}
+
+.widget-item {
+  padding: 0.4rem 0;
+}
+
+.widget-course {
+  grid-area: course;
+}
+
+.widget-report {
+  grid-area: report;
+}
+
+.widget-assessments {
+  grid-area: assessments;
+}
+
+.widget-calendar {
+  grid-area: calendar;
+  background-color: var(--white);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.widget-card {
+  padding: 0.4rem 0.3rem 0.4rem 1rem;
+  box-shadow: rgba(14, 63, 126, 0.075) 0px 0px 0px 1px, 
+              rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, 
+              rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, 
+              rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, 
+              rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, 
+              rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  border-radius: 3rem;
+  margin: 0.5rem;
+}
+
+.widget-card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.widget-card-title {
+  font-size: 1rem;
+  display: flex;
+  align-content: center;
+}
+
+.widget-card-title i {
+  color: var(--purple);
+  font-size: 1.2rem;
+  margin-right: var(--space-sm);
+}
+ 
+/* Action Buttons */
+.action-button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px; 
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  border: 2px solid var(--darkbluegreen);
+  background-color: transparent;
+  color: var(--darkbluegreen);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button > :first-child {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  margin-right: 0.5rem;
+} 
+
+.action-button:hover {
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--darkbluegreen);
+}
+
+.action-button:hover i {
+  transform: translateX(3px);
+}
+
+.action-button p {
+  margin: 0;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.action-button:hover p {
+  opacity: 1;
+  transform: none;
+}
+
+.action-button.delete {
+  border-color: var(--accentbrickred);
+  color: var(--accentbrickred);
+}
+
+.action-button.update {
+  border-color: var(--accentgreen);
+  color: var(--accentgreen);
+}
+
+.action-button.delete:hover {
+  background-color: var(--accentbrickred);
+  color: var(--white);
+  box-shadow: 0 4px 8px rgba(var(--accentbrickred-rgb), 0.25);
+}
+
+.action-button.update:hover {
+  background-color: var(--accentgreen);
+  color: var(--white);
+  box-shadow: 0 4px 8px rgba(var(--accentgreen-rgb), 0.25);
+} 

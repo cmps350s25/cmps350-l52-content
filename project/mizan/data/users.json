@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "firstName": "Sara",
+    "lastName": "Student",
+    "email": "sara@student.edu",
+    "password": "pass123",
+    "role": "Student",
+    "program": "CS",
+    "registeredSections": [
+      "303-S25",
+      "350-S25",
+      "351-S25",
+      "355-S25",
+      "323-F24",
+      "200-F24"
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": "Ahmed",
+    "lastName": "Student",
+    "email": "ahmed@student.edu",
+    "password": "pass123",
+    "role": "Student",
+    "program": "CS",
+    "registeredSections": [
+      "303-S25",
+      "350-S25",
+      "351-S25",
+      "355-S25",
+      "323-F24",
+      "205-F24"
+    ]
+  },
+  {
+    "id": 3,
+    "firstName": "Ali",
+    "lastName": "Instructor",
+    "email": "ali@instructor.edu",
+    "password": "pass123",
+    "role": "Instructor",
+    "program": "CS"
+  },
+  {
+    "id": 4,
+    "firstName": "Noora",
+    "lastName": "Instructor",
+    "email": "noora@instructor.edu",
+    "password": "pass123",
+    "role": "Instructor",
+    "program": "CE"
+  },
+  {
+    "id": 5,
+    "firstName": "Lina",
+    "lastName": "Coordinator",
+    "email": "lina@coordinator.edu",
+    "password": "pass123",
+    "role": "Coordinator",
+    "program": "CS"
+  },
+  {
+    "id": 6,
+    "firstName": "Ahmed",
+    "lastName": "Coordinator",
+    "email": "ahmed@coordinator.edu",
+    "password": "pass123",
+    "role": "Coordinator",
+    "program": "CE"
+  }
+]

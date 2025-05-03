@@ -1,0 +1,173 @@
+[
+  {
+    "crn": "200-S25",
+    "courseCode": "CMPS-200",
+    "courseName": "Computer Ethics",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "205-F24",
+    "courseCode": "CMPS-205",
+    "courseName": "Discrete Structures for Computing",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "303-F24",
+    "courseCode": "CMPS-303",
+    "courseName": "Data Structures",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "323-F25",
+    "courseCode": "CMPS-323",
+    "courseName": "Design and Analysis of Algorithms",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2025"
+  },
+  {
+    "crn": "351-F24",
+    "courseCode": "CMPS-351",
+    "courseName": "Fundamentals of Database Systems",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "263-F24",
+    "courseCode": "CMPE-263",
+    "courseName": "Computer Architecture and Organization I",
+    "creditHours": 3,
+    "instructorId": 4,
+    "program": "CE",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "310-F25",
+    "courseCode": "CMPS-310",
+    "courseName": "Software Engineering",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2025"
+  },
+  {
+    "crn": "355-S25",
+    "courseCode": "CMPE-355",
+    "courseName": "Data Communication and Computer Networks I",
+    "creditHours": 3,
+    "instructorId": 4,
+    "program": "CE",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "380-S25",
+    "courseCode": "CMPS-380",
+    "courseName": "Cybersecurity Fundamentals",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "350-S25",
+    "courseCode": "CMPS-350",
+    "courseName": "Web Development Fundamentals",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "405-F24",
+    "courseCode": "CMPS-405",
+    "courseName": "Operating Systems",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "200-F24",
+    "courseCode": "CMPS-200",
+    "courseName": "Computer Ethics",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "303-S25",
+    "courseCode": "CMPS-303",
+    "courseName": "Data Structures",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "205-F25",
+    "courseCode": "CMPS-205",
+    "courseName": "Discrete Structures for Computing",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2025"
+  },
+  {
+    "crn": "323-F24",
+    "courseCode": "CMPS-323",
+    "courseName": "Design and Analysis of Algorithms",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "263-F25",
+    "courseCode": "CMPE-263",
+    "courseName": "Computer Architecture and Organization I",
+    "creditHours": 3,
+    "instructorId": 4,
+    "program": "CE",
+    "semester": "Fall-2025"
+  },
+  {
+    "crn": "310-F24",
+    "courseCode": "CMPS-310",
+    "courseName": "Software Engineering",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Fall-2024"
+  },
+  {
+    "crn": "351-S25",
+    "courseCode": "CMPS-351",
+    "courseName": "Fundamentals of Database Systems",
+    "creditHours": 3,
+    "instructorId": 3,
+    "program": "CS",
+    "semester": "Spring-2025"
+  },
+  {
+    "crn": "355-F24",
+    "courseCode": "CMPE-355",
+    "courseName": "Data Communication and Computer Networks I",
+    "creditHours": 3,
+    "instructorId": 4,
+    "program": "CE",
+    "semester": "Fall-2024"
+  }
+]
