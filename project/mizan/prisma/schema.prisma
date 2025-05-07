@@ -10,7 +10,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// { "id": "homework", "label": "Homework" },
 model AssessmentType {
   id    String @id
   label String
+}
+
+model User {
+  // No need to make user id automatically generated
+  id                 Int       @id
+  firstName          String
+  lastName           String
+  email              String    @unique
+  password           String
+  role               String
+  program            String
+  // Many-to-many relationship with Section
+  registeredSections Section[] @relation("StudentSections")
+}
+
+model Section {
+  crn          String @id
+  courseCode   String
+  courseName   String
+  creditHours  Int
+  instructorId Int
+  // To keep it simple, no need for this relationship
+  //instructor   User   @relation(fields: [instructorId], references: [id])
+  program      String
+  semester     String
+  // Many-to-many relationship with User
+  students     User[] @relation("StudentSections")
 }

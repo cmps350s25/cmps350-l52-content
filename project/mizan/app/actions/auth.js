@@ -21,7 +21,7 @@ export async function login(prevState, formData) {
     return { error: error.message };
   }
   // Create a JWT token
-  const token = jwt.sign(user, process.env.JWT_SECRET || "your-secret-key", {
+  const token = jwt.sign(user, process.env.JWT_SECRET , {
     expiresIn: "24h",
   });
 
