@@ -9,17 +9,10 @@ async function main() {
   await prisma.assessmentType.deleteMany();
 
   try {
-    // Seed assessment types
-    seedAssessmentTypes(prisma);
-
-    // Seed users other than students
+    await seedAssessmentTypes(prisma);
     await seedNonStudentUsers(prisma);
-
-    // Seed sections
     await seedSections(prisma);
-
-    // Seed students
-    seedStudents(prisma);
+    await seedStudents(prisma);
   } catch (e) {
     console.error(e);
     throw e;
