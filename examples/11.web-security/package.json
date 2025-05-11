@@ -1,0 +1,40 @@
+{
+  "name": "auth-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "prettier": "prettier --write --ignore-unknown .",
+    "push": "drizzle-kit push:pg",
+    "seed": "npx tsx be/seed.ts",
+    "start": "next start"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jose": "^6.0.11",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.507.0",
+    "next": "15.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss": "^8",
+    "prettier": "^3.5.3",
+    "prisma": "^6.7.0",
+    "tailwindcss": "^4.1.5"
+  }
+}
