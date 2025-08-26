@@ -1,52 +1,39 @@
-import prisma from "@/lib/prisma";
-import { revalidatePath } from "next/cache";
-import Form from "next/form";
-import { redirect } from "next/navigation";
+import { onAddPost } from "@/app/posts/actions";
+import styles from "../posts.module.css";
 
 export default function NewPost() {
-  async function createPost(formData) {
-    "use server";
-
-    const title = formData.get("title");
-    const content = formData.get("content");
-
-    // Create the post using Prisma
-    await prisma.post.create({
-      data: {
-        title,
-        content,
-        authorId: 1,
-      },
-    });
-
-    revalidatePath("/posts");
-    redirect("/posts");
-  }
-
   return (
-    <div>
-      <h1>Create New Post</h1>
-      <Form action={createPost}>
-        <div>
-          <label htmlFor="title">Title</label>
+    <div className={styles.formContainer}>
+      <h1 className={styles.formTitle}>Create New Post</h1>
+      <form action={onAddPost} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label htmlFor="title" className={styles.formLabel}>
+            Title
+          </label>
           <input
             type="text"
             id="title"
             name="title"
             placeholder="Enter your post title"
+            className={styles.formInput}
           />
         </div>
-        <div>
-          <label htmlFor="content">Content</label>
+        <div className={styles.formGroup}>
+          <label htmlFor="content" className={styles.formLabel}>
+            Content
+          </label>
           <textarea
             id="content"
             name="content"
             placeholder="Write your post content here..."
             rows={6}
+            className={styles.formTextarea}
           />
         </div>
-        <button type="submit">Create Post</button>
-      </Form>
+        <button type="submit" className={styles.submitButton}>
+          Create Post
+        </button>
+      </form>
     </div>
   );
 }

@@ -1,9 +1,7 @@
 import prisma from "@/lib/prisma";
+import path from "path";
+import { writeFile } from "fs/promises";
 
-/*
-Notice that you're passing the include option to findMany which tells Prisma Client 
-to include the posts on the returned Cat objects.
-*/
 export const addCat = async (cat) => prisma.cat.create({ data: cat });
 export const getCats = async () => prisma.cat.findMany();
 export const getCat = async (id) =>
@@ -34,9 +32,21 @@ export const likeCat = async (id) => {
       },
     },
   });
-  //id = parseInt(id)
-  /*const cat = await getCat(id);
-  cat.likes = cat.likes + 1;
-  await updateCat(id, cat);*/
   return cat.likes;
 };
+
+export async function saveFile(file) {
+  try {
+    const uploadFileName = `${Date.now()}_${file.name.replaceAll(" ", "_")}`;
+    const uploadDir = path.join(
+      process.cwd(),
+      "/public/uploads",
+      uploadFileName
+    );
+    const fileContent = Buffer.from(await file.arrayBuffer());
+    await writeFile(uploadDir, fileContent);
+    return `/uploads/${uploadFileName}`;
+  } catch (error) {
+    console.error("Error saving file:", error);
+  }
+}

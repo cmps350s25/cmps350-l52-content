@@ -15,7 +15,7 @@ const Header = () => {
             <Link href="/posts">Posts</Link>
           </li>
           <li>
-            <Link href="/files">File Explorer</Link>
+            <Link href="/posts/new">Add Post</Link>
           </li>
         </ul>
       </nav>

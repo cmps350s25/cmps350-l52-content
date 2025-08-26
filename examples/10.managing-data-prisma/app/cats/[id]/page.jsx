@@ -1,36 +1,26 @@
+import { onUpsertCat } from "../actions";
 import { getCat } from "../cat-repo";
 import LikeButton from "../LikeButton";
 
 export default async function CatForm({ params }) {
   // Fetch data
-  const catId = params.id;
-  console.log("CatForm - catId", catId);
+  const { id } = await params;
+  console.log("CatForm - cat id", id);
 
   // In case of update get the cat details
   let cat;
-  if (catId && catId !== "new") {
-    cat = await getCat(catId);
+  if (id && id !== "new") {
+    cat = await getCat(id);
     console.log("CatForm - cat", cat);
   }
-
-  /*async function onSubmitHandler(formData) {
-    "use server"
-
-    const { id, name, breed } = Object.fromEntries(formData.entries())
-    const cat = { id, name, breed }
-    console.log("onSubmit - cat:", cat)
-
-    upsertCat(cat)
-    // Redirect to list of cats
-    redirect("/cats")
-  }*/
 
   return (
     <div className="center">
       {cat ? <h3>Edit Cat {cat?.name}</h3> : <h3>Add Cat</h3>}
       <br />
       {cat ? <img src={cat?.imageUrl} width={150} /> : ""}
-      <form method="post" encType="multipart/form-data" action="/api/cats">
+      {/* encType="multipart/form-data" */}
+      <form action={onUpsertCat}>
         <input name="id" type="hidden" defaultValue={cat?.id ?? 0} />
         <label>Name</label>
         <input name="name" type="text" defaultValue={cat?.name} />

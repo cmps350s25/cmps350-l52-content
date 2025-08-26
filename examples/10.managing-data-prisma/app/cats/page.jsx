@@ -2,7 +2,6 @@ import { getCats } from "./cat-repo";
 import LikeButton from "./LikeButton";
 import DeleteButton from "./DeleteButton";
 import { onDeleteCat } from "./actions";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function CatsPage() {
